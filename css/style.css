@@ -1,0 +1,36 @@
+body {
+    background-color:whitesmoke ;
+    margin:0px;
+}
+
+nav {
+    display:flex;
+    flex-direction: column;
+    background-color:#adb5bd ;
+    padding:5px; 
+}
+
+
+ol {
+    display:flex;
+    gap:30px;
+    justify-content: space-around;
+    margin:0px;
+    list-style:none;
+    text-decoration: overline whitesmoke  2px;
+}
+
+ol a {
+    text-decoration: none;
+}
+
+
+footer {
+    background-color: #b9bec4;
+    position:absolute;
+    left: 0px;
+    bottom:0px;
+    width:100%;
+    text-align:center;
+    margin-top:25px; 
+}
