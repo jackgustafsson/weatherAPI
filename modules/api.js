@@ -1,8 +1,8 @@
 import { renderFunction } from "./main.js";
 const API_KEY = "1bd191a3ddba932a50d8337c447a21a4";
 
-async function getDataFromCity() {
-    const url = `https://api.openweathermap.org/geo/1.0/direct?q=Stockholm&appid=${API_KEY}`;
+async function getDataFromCity(val) {
+    const url = `https://api.openweathermap.org/geo/1.0/direct?q=${val}&appid=${API_KEY}`;
     const res = await fetch(url);
     const data = await res.json();
     return data;
