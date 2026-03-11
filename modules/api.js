@@ -18,12 +18,10 @@ async function getWeatherData(lon, lat) {
 
 async function main() {
     const cityResults = await getDataFromCity();
-
     const { lat, lon, name } = cityResults[0];
-
     const weather = await getWeatherData(lon, lat);
-
-    renderFunction(name, lat, lon, weather);
+    renderFunction(weather);
+    console.log(weather)
 }
-
 main()
+console.log(Date.now())
