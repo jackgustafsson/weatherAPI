@@ -1,32 +1,29 @@
+import { renderFunction } from "./main.js";
 const API_KEY = "1bd191a3ddba932a50d8337c447a21a4";
 
 async function getDataFromCity() {
     const url = `https://api.openweathermap.org/geo/1.0/direct?q=Stockholm&appid=${API_KEY}`;
     const res = await fetch(url);
     const data = await res.json();
-    console.log(data);
     return data;
 }
 
 async function getWeatherData(lon, lat) {
     const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`;
-
     const res = await fetch(url);
     const data = await res.json();
-
     console.log(data);
+    return data;
 }
-
 
 async function main() {
-    const data = await getDataFromCity();
+    const cityResults = await getDataFromCity();
 
-    const lat = data[0].lat;
-    const lon = data[0].lon;
-    const city = data[0].name;
+    const { lat, lon, name } = cityResults[0];
 
-    console.log(city, lat, lon);
-    getWeatherData(lon, lat);
+    const weather = await getWeatherData(lon, lat);
+
+    renderFunction(name, lat, lon, weather);
 }
 
-main();
+main()
