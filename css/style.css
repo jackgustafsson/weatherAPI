@@ -1,3 +1,11 @@
+.root {
+ --light-orange-color:#ffb703; 
+ --organge-color:#fb8500;
+  --dark-orange-color:#e85d04;
+ 
+}
+
+
 body {
     background-color:whitesmoke ;
     margin:0px;
@@ -24,13 +32,63 @@ ol a {
     text-decoration: none;
 }
 
+.container-hero {
+    background-color: #e85d04;
+    color:white;
+    padding:10px;
+}
+
+.hero-text {
+    text-align:center;
+}
+
+p {
+    margin:3px
+}
+
+.container {
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    background-color: red;
+    text-align: center;
+
+}
+
+.box1 {
+    background-color: #fb8500;
+    grid-row: 3/6;
+    grid-column: 1/5;
+}
+
+.box2 {
+    background-color: #ffb703;
+    grid-row: 1/5;
+    grid-column: 1/5;
+}
+
+img {
+    width: 350px;
+}
+
+
+
 
 footer {
-    background-color: #b9bec4;
-    position:absolute;
+    background-color: rgb(185, 190, 196);
+    position: fixed;
     left: 0px;
-    bottom:0px;
-    width:100%;
-    text-align:center;
-    margin-top:25px; 
+    bottom: 0px;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0px;
 }
+
+
+
+
+
+
+
+/* Anteckningar **/ 
+/* Home , APi, About, Contact 
