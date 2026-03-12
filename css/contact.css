@@ -1,0 +1,43 @@
+form {
+    align-items: start;
+    background-color: #e8e7e7;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    padding: 2rem;
+    margin:2px;
+
+}
+
+.box {
+
+    display:flex;
+    justify-content: center;
+    margin-top:10%;
+}
+
+#icon {
+    font-size:32px;
+}
+
+
+
+.contact {
+    position:absolute;
+    display:flex;
+    flex-direction:column;
+    margin:10px;
+    padding:10px;
+    text-align:center; 
+}
+
+
+
+p {
+    margin:2px;
+    font-size: larger;
+}
+
+h1 {
+    margin:0px;
+}
