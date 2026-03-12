@@ -5,7 +5,6 @@
     const regionNames = new Intl.DisplayNames(['en'], { type: 'region' });
     p.textContent = regionNames.of(country);
 
-
     Converting unix timestamps to local date and time strings:
 
     const timestamp = new Date(weather.dt * 1000);
@@ -17,5 +16,4 @@
     console.log("Today's date: " + date);
     console.log("Sunrise: " + sunriseDate)
     console.log("Sunset " + sunsetDate);
-
 */
