@@ -1,61 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="This great website can show you lots of weather related stats, with great visuals and accurate data! ">
+    <meta name="description"
+        content="This great website can show you lots of weather related stats, with great visuals and accurate data! ">
     <link rel="stylesheet" href="./css/style.css">
+    <script src="modules/functions.js" defer></script>
     <title>Document</title>
 </head>
+
 <body>
-    <header> 
+    <header>
         <nav>
-            <div class ="skyview">
-            <h2>Skyview weather</h2>
-            <p>&#127780;</p>
-        </div>
+            <div class="skyview">
+                <h2>Skyview weather</h2>
+                <p>&#127780;</p>
+            </div>
             <ol>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="apipage.html">API</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>  
+                <li><a href="contact.html">Contact</a></li>
             </ol>
 
-        </nav>    
+        </nav>
+
     </header>
 
-     <main>
+    <main>
+        <div class="toggle-container">
+            <button id="darkLigthModeBtn">Toggle dark/light mode</button>
+        </div>
+
+
         <section class="hero">
             <div class="hero-text">
                 <h1>Welcome to our Weather App </h1>
-                <p>Check the weather anywhere in the world. 
-                    Get the latest forcasts and stay updated.  
+                <p>Check the weather anywhere in the world.
+                    Get the latest forcasts and stay updated.
                 </p>
                 <button><a href="apipage.html"> Check Weather</a></button>
             </div>
 
             <div class="hero-image">
-                <img src="https://images.stockcake.com/public/d/b/4/db4a7cd2-7802-4373-826c-26e45eb738ad_large/sunset-rain-road-stockcake.jpg" alt ="Weather illustration">
+                <img src="https://images.stockcake.com/public/d/b/4/db4a7cd2-7802-4373-826c-26e45eb738ad_large/sunset-rain-road-stockcake.jpg"
+                    alt="Weather illustration">
             </div>
         </section>
+        <div class="toggle-container">
+
+        </div>
+
     </main>
 
 
-  
-
-
-       
-
-  
 
 
 
 
-    
+
+
+
+
+
+
+
 
     <footer>
         <p>Find us on social media!</p>
     </footer>
-    
+
 </body>
+
 </html>

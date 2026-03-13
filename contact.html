@@ -1,57 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/contact.css">
+    <script src="modules/functions.js" defer></script>
     <title>Document</title>
 </head>
+
 <body>
-    <header> 
+    <header>
         <nav>
-            <div class ="skyview">
-            <h2>Skyview weather</h2>
-            <p>&#127780;</p>
-        </div>
+            <div class="skyview">
+                <h2>Skyview weather</h2>
+                <p>&#127780;</p>
+            </div>
             <ol>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="apipage.html">API</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>  
+                <li><a href="contact.html">Contact</a></li>
             </ol>
-        </nav>    
+        </nav>
     </header>
 
-<main>
-    <section class="box">
-        <div class="contact">
-            <p id="icon">&#127780;</p>
-            <h1>Contact Us</h1>
-            <p> We'd love to hear from you, contatct us a message<br> and we'll respond as soon as possible</p>
-
-            <form>
-                <label name="fname">Name:</label>
-                <input type="text" placeholder="name">
-                <label name="email">Email:</label>
-                <input type="email" placeholder="Email">
-                <label name="message">Message: </label>
-                <input type="text" placeholder="message">
-                <br>
-                <button>Submit</button>
-            </form>
+    <main>
+        <div class="toggle-container">
+            <button id="darkLigthModeBtn">Toggle dark/light mode</button>
         </div>
-    </section>
-</main>
+        <section class="box">
+            <div class="contact">
+                <p id="icon">&#127780;</p>
+                <h1>Contact Us</h1>
+                <p> We'd love to hear from you, contatct us a message<br> and we'll respond as soon as possible</p>
+
+                <form>
+                    <label name="fname">Name:</label>
+                    <input type="text" placeholder="name">
+                    <label name="email">Email:</label>
+                    <input type="email" placeholder="Email">
+                    <label name="message">Message: </label>
+                    <input type="text" placeholder="message">
+                    <br>
+                    <button>Submit</button>
+                </form>
+            </div>
+
+        </section>
+    </main>
 
 
 
 
-    
+
 
     <footer>
         <p>Find us on social media!</p>
     </footer>
-    
+
 </body>
+
 </html>
