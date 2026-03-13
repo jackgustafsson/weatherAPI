@@ -19,7 +19,6 @@ form {
 }
 
 .contact {
-  position: absolute;
   display: flex;
   flex-direction: column;
   margin: 10px;

@@ -15,8 +15,13 @@ body {
     background-color:#104099;
 }
 
-.dark-mode-main {
+.dark-mode-main, .dark-mode-main .container{
     background-color: rgb(66, 64, 64);
+    color: white;
+}
+
+.dark-mode-main #contactForm {
+    background-color: rgb(35, 34, 34);
     color: white;
 }
 
@@ -33,6 +38,11 @@ body {
     display: flex;
     justify-content: center;
     padding-top: 1rem;
+}
+
+.toggle-container #darkLigthModeBtn {
+    padding: 0.5rem;
+    border-radius: 10px;
 }
 
 nav {
