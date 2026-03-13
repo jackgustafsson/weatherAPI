@@ -1,5 +1,5 @@
 export function renderFunction(f) {
-    const container = document.querySelector("main");
+    const container = document.querySelector("#results-container");
     const form = document.querySelector('#search-bar');
 
     container.innerHTML = "";
