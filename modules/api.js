@@ -1,8 +1,8 @@
 import { renderFunction } from "./main.js";
 const API_KEY = "1bd191a3ddba932a50d8337c447a21a4";
 
-async function getDataFromCity() {
-    const url = `https://api.openweathermap.org/geo/1.0/direct?q=Stockholm&appid=${API_KEY}`;
+async function getDataFromCity(cityName) {
+    const url = `https://api.openweathermap.org/geo/1.0/direct?q=${encodeURIComponent(cityName)}&appid=${API_KEY}`;
     const res = await fetch(url);
     const data = await res.json();
     return data
@@ -16,11 +16,8 @@ async function getWeatherData(lon, lat) {
     return data;
 }
 
-async function main() {
-    const cityResults = await getDataFromCity();
-    const { lat, lon } = cityResults[0];
-    const weather = await getWeatherData(lon, lat);
 
+function viewData(weather) {
     const timestamp = new Date(weather.dt * 1000);
     const sunset = new Date(weather.sys.sunset * 1000);
     const sunrise = new Date(weather.sys.sunrise * 1000);
@@ -28,7 +25,7 @@ async function main() {
     const sunsetDate = sunset.toLocaleDateString("sv") + " " + sunset.toLocaleTimeString("sv")
     const date = timestamp.toLocaleDateString("sv") + " " + timestamp.toLocaleTimeString("sv")
 
-    const view = {
+    return {
         city: weather.name,
         date,
         weather: weather.weather[0].main,
@@ -43,8 +40,34 @@ async function main() {
         windSpeed: weather.wind.speed,
         windDeg: weather.wind.deg,
     };
-    renderFunction(view);
-    console.log(weather)
 }
-main()
+
+async function main(city) {
+    const cityResults = await getDataFromCity(city);
+    const { lat, lon } = cityResults[0];
+    const weather = await getWeatherData(lon, lat);
+
+    const vw = viewData(weather);
+    renderFunction(vw);
+    console.log(weather);
+}
+
+function searchForm() {
+    const form = document.querySelector('#search-bar');
+    const input = form.querySelector('input[type="text"]');
+
+    form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        const cityName = input.value.trim();
+        if (!cityName) return;
+
+        try {
+            await main(cityName);
+        } catch (error) {
+            console.log(error);
+        }
+    })
+}
+searchForm()
 console.log(Date.now())

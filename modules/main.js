@@ -1,5 +1,9 @@
 export function renderFunction(f) {
     const container = document.querySelector("main");
+    const form = document.querySelector('#search-bar');
+
+    container.innerHTML = "";
+    container.appendChild(form);
 
     const h1 = document.createElement("h1");
     h1.innerText = f.city;
