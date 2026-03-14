@@ -1,8 +1,8 @@
 #about {
-  background-color: white;
+  border: solid white;
   color: black;
   padding: 0px 12px 0px 12px;
-  border-radius: 2px;
+  border-radius: 5px;
 }
 
 h1 {
@@ -34,7 +34,7 @@ h1 {
   border-radius: 20px;
 }
 
-button {
+#myBtn {
   position: fixed;
   left: 80%;
   bottom: 2%;
@@ -52,7 +52,7 @@ button {
     border: none;
   }
 
-  button {
+  #myBtn {
     left: 90%;
     bottom: 4%;
   }

@@ -66,10 +66,10 @@ nav {
 }
 
 #home {
-    background-color: white;
+    border: solid white;
     color:black;
     padding:0px 12px 0px 12px;
-    border-radius: 2px;
+    border-radius: 5px;
 }
 
 .hamburger {
@@ -93,10 +93,6 @@ nav {
 
 #navMenu.show{
     display:flex;
-}
-
-#navMenu:hover {
-     text-decoration: underline whitesmoke  2px;
 }
 
 #navMenu a {

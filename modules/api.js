@@ -54,7 +54,7 @@ function viewData(weather) {
 export function viewForecastData(cityName, item) {
     const timestamp = new Date(item.dt * 1000);
     const date = timestamp.toLocaleDateString("sv") + " " + timestamp.toLocaleTimeString("sv");
-    
+
     return {
         city: cityName,
         date,

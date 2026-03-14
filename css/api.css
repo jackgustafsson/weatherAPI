@@ -1,75 +1,70 @@
 body {
-    background-image:url('../images/peacefulSky.jpg');
-    background-position: top;
+  background-image: url("../images/peacefulSky.jpg");
+  background-position: top;
 }
 
 #sky {
-    color:white;
+  color: white;
 }
 
-
-#apipage   {
-    background-color: white;
-    color:black;
-    padding:0px 12px 0px 12px;
-    border-radius: 2px;
+#apipage {
+  border: solid white;
+  color: black;
+  padding: 0px 12px 0px 12px;
+  border-radius: 5px;
 }
 
-ol  :hover  {
-    text-decoration: none;  
+ol:hover {
+  text-decoration: none;
 }
 
 #search-bar {
-    text-align: center;
-    
-    padding:10px;
-    background-color:#b9bec4;
-    border-radius: 5px;
+  text-align: center;
+
+  padding: 10px;
+  background-color: #b9bec4;
+  border-radius: 5px;
 }
 
 h1 {
-    text-align: center;
-    color:white;
-    margin-top: 0px;
+  text-align: center;
+  color: white;
+  margin-top: 0px;
 }
+
+h2 {
+  text-align: center;
+}
+
 p {
-    text-align: center;
-    color:black; 
-    padding:5px; 
+  text-align: center;
+  color: black;
+  padding: 5px;
 }
 
 footer p {
-    color:black;
+  color: black;
 }
-
 
 #myBtn {
-    position:fixed;
-    left:80%;
-    bottom:2%;
-    padding:0px 10px 0px 10px;
+  position: fixed;
+  left: 80%;
+  bottom: 2%;
+  padding: 0px 10px 0px 10px;
 }
 
+@media screen and (min-width: 1024px) {
+  h1 {
+    color: #ffffff;
+  }
 
-
-
-
-
-@media screen and (min-width:1024px) {
- 
-    h1 {
-        color:#ffffff;
-    }
-
-    p {
-        color:#000000;
-        background-color: none;
-        font-size: none;
-        margin:0px;
-    }
-   body {
+  p {
+    color: #000000;
+    background-color: none;
+    font-size: none;
+    margin: 0px;
+  }
+  body {
     background-size: cover;
-   }
-    
-} 
-    
+  }
+}
