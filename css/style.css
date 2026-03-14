@@ -1,5 +1,6 @@
 .root {
 --blue-color:#5386E4;
+ --gray-color:#b9bec4;
  
 }
 
@@ -7,6 +8,7 @@
 body {
     background-color:whitesmoke ;
     margin:0;
+    font-family:sans-serif;
     
 }
 
@@ -28,6 +30,12 @@ nav {
     margin:0px;
 }
 
+#home {
+    background-color: white;
+    color:black;
+    padding:0px 12px 0px 12px;
+    border-radius: 2px;
+}
 
 
 
@@ -39,9 +47,6 @@ ol {
     list-style:none;
 }
 
-ol:hover {
-     text-decoration: underline whitesmoke  2px;
-}
 
 ol a {
     text-decoration: none;
@@ -91,12 +96,43 @@ button a {
 .hero-text button:hover {
     background: #2563eb;
 
+    animation-name: spin;
+    animation-duration: 3s;
+    animation-timing-function:ease;
+    animation-delay:1s;
+    animation-fill-mode: forwards;
+
 }
+
+
+@keyframes spin {
+
+    0%{
+    }
+
+    50%{
+        scale:2;
+        transform:rotate(0);
+    }
+
+    100%{
+
+        transform:rotate(360deg);
+        scale:2;
+    }
+}
+
+
+
+
+
 
 .hero-image img {
     width: 300px;
     border: 5px solid #a9a9a9;
+    border-radius:20px;
 }
+
 
 
 /*main*/

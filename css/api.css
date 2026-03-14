@@ -1,0 +1,63 @@
+body {
+    background-image:url('../images/sky.jpg');
+    background-position: top;
+}
+
+#sky {
+    color:white;
+}
+
+
+#apipage   {
+    background-color: white;
+    color:black;
+    padding:0px 12px 0px 12px;
+    border-radius: 2px;
+}
+
+ol  :hover  {
+    text-decoration: none;  
+}
+
+#search-bar {
+    text-align: center;
+    
+    padding:10px;
+    background-color:#b9bec4;
+    border-radius: 5px;
+}
+
+h1 {
+    text-align: center;
+    color:white;
+    margin-top: 0px;
+}
+p {
+    text-align: center;
+    color:black;  
+}
+
+footer p {
+    color:black;
+}
+
+
+
+
+@media screen and (min-width:1024px) {
+ 
+    h1 {
+        color:white;
+    }
+
+    p {
+        color:#495057;
+        background-color: none;
+        font-size: none;
+    }
+   body {
+    background-size: cover;
+   }
+    
+} 
+    
