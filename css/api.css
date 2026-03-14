@@ -1,5 +1,5 @@
 body {
-    background-image:url('../images/sky.jpg');
+    background-image:url('../images/peacefulSky.jpg');
     background-position: top;
 }
 
@@ -35,13 +35,20 @@ h1 {
 p {
     text-align: center;
     color:black; 
-    margin-left:5px; 
+    padding:5px; 
 }
 
 footer p {
     color:black;
 }
 
+
+#myBtn {
+    position:fixed;
+    left:80%;
+    bottom:2%;
+    padding:0px 10px 0px 10px;
+}
 
 
 
@@ -51,13 +58,14 @@ footer p {
 @media screen and (min-width:1024px) {
  
     h1 {
-        color:white;
+        color:#ffffff;
     }
 
     p {
-        color:#495057;
+        color:#000000;
         background-color: none;
         font-size: none;
+        margin:0px;
     }
    body {
     background-size: cover;
