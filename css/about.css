@@ -1,3 +1,10 @@
+#about {
+  background-color: white;
+  color: black;
+  padding: 0px 12px 0px 12px;
+  border-radius: 2px;
+}
+
 h1 {
   text-align: center;
 }
@@ -15,14 +22,23 @@ h1 {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  box-shadow: 2px 20px 30px gray;
   margin: 10px;
   padding: 10px;
   gap: 20px;
+  border-radius: 20px;
+  border: 2px solid #b9bec4;
 }
 
 .info img {
   width: 350px;
+  border-radius: 20px;
+}
+
+button {
+  position: fixed;
+  left: 80%;
+  bottom: 2%;
+  padding: 0px 10px 0px 10px;
 }
 
 @media screen and (min-width: 1024px) {
@@ -33,5 +49,11 @@ h1 {
     flex-direction: row;
     margin: 10px;
     gap: 20px;
+    border: none;
+  }
+
+  button {
+    left: 90%;
+    bottom: 4%;
   }
 }
