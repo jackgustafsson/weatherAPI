@@ -1,8 +1,9 @@
-import { renderFunction } from "./main.js";
+import { renderCurrent, renderForecast } from "./main.js";
+
 const API_KEY = "1bd191a3ddba932a50d8337c447a21a4";
 
 async function getDataFromCity(cityName) {
-    const url = `https://api.openweathermap.org/geo/1.0/direct?q=${encodeURIComponent(cityName)}&appid=${API_KEY}`;
+    const url = `https://api.openweathermap.org/geo/1.0/direct?q=${(cityName)}&appid=${API_KEY}`;
     const res = await fetch(url);
     const data = await res.json();
     return data
@@ -10,6 +11,14 @@ async function getDataFromCity(cityName) {
 
 async function getWeatherData(lon, lat) {
     const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`;
+    const res = await fetch(url);
+    const data = await res.json();
+    console.log(data);
+    return data;
+}
+
+async function getForecastData(lon, lat) {
+    const url = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`;
     const res = await fetch(url);
     const data = await res.json();
     console.log(data);
@@ -42,18 +51,41 @@ function viewData(weather) {
     };
 }
 
-async function main(city) {
+export function viewForecastData(cityName, item) {
+    const timestamp = new Date(item.dt * 1000);
+    const date = timestamp.toLocaleDateString("sv") + " " + timestamp.toLocaleTimeString("sv");
+    
+    return {
+        city: cityName,
+        date,
+        weather: item.weather[0].main,
+        description: item.weather[0].description,
+        temp: item.main.temp,
+        tempFeelsLike: item.main.feels_like,
+        pressure: item.main.pressure,
+        humidity: item.main.humidity,
+        visibility: item.visibility,
+        windSpeed: item.wind.speed,
+        windDeg: item.wind.deg,
+    };
+}
+
+async function main(city, mode) {
     const cityResults = await getDataFromCity(city);
     const { lat, lon } = cityResults[0];
-    const weather = await getWeatherData(lon, lat);
 
+    if (mode === "forecast") {
+        const forecast = await getForecastData(lon, lat);
+        renderForecast(forecast);
+        return;
+    }
+    const weather = await getWeatherData(lon, lat);
     const vw = viewData(weather);
-    renderFunction(vw);
-    console.log(weather);
+    renderCurrent(vw);
 }
 
 function searchForm() {
-    const form = document.querySelector('#search-bar');
+    const form = document.querySelector("#search-bar");
     const input = form.querySelector('input[type="text"]');
 
     form.addEventListener("submit", async (e) => {
@@ -62,12 +94,13 @@ function searchForm() {
         const cityName = input.value.trim();
         if (!cityName) return;
 
+        const mode = e.submitter?.value;
+
         try {
-            await main(cityName);
+            await main(cityName, mode);
         } catch (error) {
             console.log(error);
         }
-    })
+    });
 }
 searchForm()
-console.log(Date.now())
